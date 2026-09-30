@@ -1,0 +1,38 @@
+@import 'tailwindcss';
+
+/* Design tokens from the Figma "cozy" file */
+@theme {
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
+
+  --color-brand: #c15400;
+  --color-brand-light: #fdf6ee;
+
+  --color-surface: #ffffff; /* 50 */
+  --color-canvas: #f5f5f5; /* 100 */
+  --color-muted: #6a6a6a; /* 200 (text) */
+  --color-divider: #e8e8e8; /* 200 (stroke) */
+  --color-border: #dcdcdc; /* 300 */
+  --color-ink: #111111; /* 900 */
+  --color-ink-soft: #444444; /* 500 */
+  --color-subtle: #777777; /* "Preparing" status */
+  --color-badge: #848484; /* inactive tab count */
+  --color-outline: #f0ece9; /* header / search / filter stroke */
+
+  --color-blue: #0095ff;
+  --color-blue-light: #e6f6ff;
+  --color-success: #39ab00;
+
+  --shadow-card: 0 16px 48px 0 rgba(0, 0, 0, 0.07);
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-canvas font-sans text-ink antialiased;
+  }
+}

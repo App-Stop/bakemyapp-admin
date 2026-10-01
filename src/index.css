@@ -7,6 +7,10 @@
   --color-brand: #c15400;
   --color-brand-light: #fdf6ee;
 
+  /* Bake My App default theme (login, before a bakery's own brand applies) */
+  --color-platform: #554cf1;
+  --color-platform-light: #eeedfe;
+
   --color-surface: #ffffff; /* 50 */
   --color-canvas: #f5f5f5; /* 100 */
   --color-muted: #6a6a6a; /* 200 (text) */

@@ -4,12 +4,8 @@
 @theme {
   --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
 
-  --color-brand: #c15400;
-  --color-brand-light: #fdf6ee;
-
-  /* Bake My App default theme (login, before a bakery's own brand applies) */
-  --color-platform: #554cf1;
-  --color-platform-light: #eeedfe;
+  --color-brand: #554cf1;
+  --color-brand-light: #eeedfe;
 
   --color-surface: #ffffff; /* 50 */
   --color-canvas: #f5f5f5; /* 100 */

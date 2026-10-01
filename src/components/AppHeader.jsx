@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import croissant from '../assets/common/croissant.svg'
+import logo from '../assets/common/bakemyapp-logo.svg'
 import logOut from '../assets/common/log-out.svg'
 import menuRestaurantActive from '../assets/common/menu-restaurant-active.svg'
 import menuRestaurantInactive from '../assets/common/menu-restaurant-inactive.svg'
@@ -39,15 +39,11 @@ export default function AppHeader({ branchName, activePage, onLogout }) {
     // at xl it matches the design (flexible sides, fixed 600px nav).
     <header className="flex shrink-0 items-center justify-between gap-3 border-b border-outline bg-white px-4 py-3 sm:gap-6 md:p-5 xl:gap-10">
       <div className="flex shrink-0 items-center gap-2.5 xl:min-w-0 xl:flex-1">
-        <div className="flex size-10 shrink-0 items-center justify-center rounded-full bg-brand md:size-[46px]">
-          <img src={croissant} alt="" className="size-[25.6px] md:size-[29.44px]" />
+        {/* The logo is white-only, so it sits on a brand-coloured chip */}
+        <div className="flex h-10 shrink-0 items-center justify-center rounded-xl bg-brand px-3 md:h-[46px]">
+          <img src={logo} alt="Bake My App" className="h-6 w-auto md:h-7" />
         </div>
-        <div className="hidden min-w-0 flex-col gap-1 sm:flex">
-          <p className="text-base font-semibold whitespace-nowrap text-ink">
-            Ross Bakers Co
-          </p>
-          <p className="truncate text-xs text-muted">{branchName}</p>
-        </div>
+        <p className="hidden min-w-0 truncate text-xs text-muted sm:block">{branchName}</p>
       </div>
 
       <nav

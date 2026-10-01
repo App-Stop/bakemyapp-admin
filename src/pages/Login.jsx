@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import ambientGlowTop from '../assets/login/ambient-glow-top.svg'
 import ambientGlowBottom from '../assets/login/ambient-glow-bottom.svg'
-import logo from '../assets/login/bakemyapp-logo.svg'
+import logo from '../assets/common/bakemyapp-logo.svg'
 import eyeOff from '../assets/login/eye-off.svg'
 
 function WelcomePanel() {
   return (
-    <aside className="relative hidden w-[42%] max-w-[620px] shrink-0 flex-col justify-between gap-12 overflow-hidden bg-platform p-12 lg:flex xl:w-[620px] xl:p-16">
+    <aside className="relative hidden w-[42%] max-w-[620px] shrink-0 flex-col justify-between gap-12 overflow-hidden bg-brand p-12 lg:flex xl:w-[620px] xl:p-16">
       {/* Anchored to the panel corners (not the 620×1024 frame origin) so they stay put as the panel resizes */}
       <img
         src={ambientGlowTop}
@@ -36,7 +36,7 @@ function WelcomePanel() {
         </p>
       </div>
 
-      <p className="relative text-[11px] text-platform-light">
+      <p className="relative text-[11px] text-brand-light">
         © 2026 Bake My App ·{' '}
         <a href="#" className="hover:underline">
           Privacy
@@ -56,7 +56,7 @@ function FormField({ id, label, children }) {
       <label htmlFor={id} className="text-[13px] font-medium text-ink">
         {label}
       </label>
-      <div className="flex h-14 w-full items-center justify-between gap-3 rounded-[10px] border border-border bg-surface px-4 transition-colors focus-within:border-platform">
+      <div className="flex h-14 w-full items-center justify-between gap-3 rounded-[10px] border border-border bg-surface px-4 transition-colors focus-within:border-brand">
         {children}
       </div>
     </div>
@@ -82,8 +82,8 @@ export default function Login({ onSubmit }) {
 
       <main className="flex min-w-0 flex-1 flex-col items-center justify-center gap-8 px-4 py-10 sm:px-8">
         {/* The welcome panel is hidden below lg, so keep the brand visible above the card.
-            The logo is white-only, so it sits on a platform-coloured chip here. */}
-        <div className="rounded-2xl bg-platform px-6 py-4 lg:hidden">
+            The logo is white-only, so it sits on a brand-coloured chip here. */}
+        <div className="rounded-2xl bg-brand px-6 py-4 lg:hidden">
           <img src={logo} alt="Bake My App" className="h-[51px] w-[111px]" />
         </div>
 
@@ -129,7 +129,7 @@ export default function Login({ onSubmit }) {
                   onClick={() => setShowPassword((v) => !v)}
                   aria-label={showPassword ? 'Hide password' : 'Show password'}
                   aria-pressed={showPassword}
-                  className="flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-sm focus-visible:outline-2 focus-visible:outline-platform"
+                  className="flex size-5 shrink-0 cursor-pointer items-center justify-center rounded-sm focus-visible:outline-2 focus-visible:outline-brand"
                 >
                   <img src={eyeOff} alt="" className="size-5" />
                 </button>
@@ -138,7 +138,7 @@ export default function Login({ onSubmit }) {
 
             <button
               type="submit"
-              className="flex h-[52px] w-full cursor-pointer items-center justify-center rounded-full bg-platform text-sm font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-platform"
+              className="flex h-[52px] w-full cursor-pointer items-center justify-center rounded-full bg-brand text-sm font-semibold text-white transition-opacity hover:opacity-90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             >
               Sign in
             </button>

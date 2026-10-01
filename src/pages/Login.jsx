@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import ambientGlowTop from '../assets/login/ambient-glow-top.svg'
 import ambientGlowBottom from '../assets/login/ambient-glow-bottom.svg'
-import croissant from '../assets/login/croissant.svg'
+import logo from '../assets/login/bakemyapp-logo.svg'
 import eyeOff from '../assets/login/eye-off.svg'
 
 function WelcomePanel() {
@@ -21,15 +21,7 @@ function WelcomePanel() {
         className="pointer-events-none absolute bottom-[-250px] left-[-252px] size-[500px] max-w-none"
       />
 
-      <div className="relative flex items-center gap-3.5">
-        <div className="flex size-[46px] items-center justify-center rounded-full bg-platform-light">
-          <img src={croissant} alt="" className="size-[29.44px]" />
-        </div>
-        <div className="flex flex-col gap-[3px] whitespace-nowrap">
-          <p className="text-lg font-semibold text-white">Ross Bakers Co.</p>
-          <p className="text-xs text-white/80">Freshly baked goods</p>
-        </div>
-      </div>
+      <img src={logo} alt="Bake My App" className="relative h-[51px] w-[111px]" />
 
       <div className="relative flex flex-col gap-[22px]">
         <p className="text-[13px] font-semibold tracking-[1.04px] text-white/80 uppercase">
@@ -45,7 +37,7 @@ function WelcomePanel() {
       </div>
 
       <p className="relative text-[11px] text-platform-light">
-        © 2026 Ross Bakers Co. ·{' '}
+        © 2026 Bake My App ·{' '}
         <a href="#" className="hover:underline">
           Privacy
         </a>{' '}
@@ -89,15 +81,10 @@ export default function Login({ onSubmit }) {
       <WelcomePanel />
 
       <main className="flex min-w-0 flex-1 flex-col items-center justify-center gap-8 px-4 py-10 sm:px-8">
-        {/* The welcome panel is hidden below lg, so keep the brand visible above the card */}
-        <div className="flex items-center gap-3.5 lg:hidden">
-          <div className="flex size-[46px] items-center justify-center rounded-full bg-platform-light">
-            <img src={croissant} alt="" className="size-[29.44px]" />
-          </div>
-          <div className="flex flex-col gap-[3px] whitespace-nowrap">
-            <p className="text-lg font-semibold text-ink">Ross Bakers Co.</p>
-            <p className="text-xs text-muted">Freshly baked goods</p>
-          </div>
+        {/* The welcome panel is hidden below lg, so keep the brand visible above the card.
+            The logo is white-only, so it sits on a platform-coloured chip here. */}
+        <div className="rounded-2xl bg-platform px-6 py-4 lg:hidden">
+          <img src={logo} alt="Bake My App" className="h-[51px] w-[111px]" />
         </div>
 
         <div className="flex w-full max-w-[480px] flex-col gap-9 rounded-[20px] bg-surface p-6 shadow-card sm:p-11">
